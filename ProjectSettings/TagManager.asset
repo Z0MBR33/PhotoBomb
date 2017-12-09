@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - amazing
+  - Fire
+  - verygood
+  - good
+  - bad
+  - verybad
   layers:
   - Default
   - TransparentFX

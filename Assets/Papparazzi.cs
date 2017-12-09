@@ -20,8 +20,11 @@ public class Papparazzi : MonoBehaviour
     public float minimumY = -10F;
     public float maximumY = 10F;
     public float movementSpeed = 10F;
+    int[] monies = new int[] { 0, 0, 0 };
+    private static int money;
     Rect rekt;
     Texture2D[] snap = new Texture2D[3];
+    public logicHandler handler;
 
     // Use this for initialization
     void Start()
@@ -32,7 +35,6 @@ public class Papparazzi : MonoBehaviour
             body.freezeRotation = true;
         originalPosition = transform.position;
         shots = maxshots;
-
     }
 
     // Update is called once per frame
@@ -47,6 +49,8 @@ public class Papparazzi : MonoBehaviour
             transform.Translate(moveX, moveY, 0F);
             if (Input.GetMouseButtonDown(0))
             {
+                monies[maxshots-shots] = handler.testStaticRaycasts() + handler.testDynamicRaycasts() + handler.getAmazingAttractions();
+                Debug.Log("$$$: " + monies[maxshots - shots]);
                 canMove = false;
                 Camera.onPostRender += Snap;
             }
@@ -93,7 +97,6 @@ public class Papparazzi : MonoBehaviour
             snap[maxshots - shots].ReadPixels(rekt, 0, 0);
             snap[maxshots - shots].Apply();
             shots--;
-            Debug.Log("Shots: " + shots + " Snap Removed " + cam.gameObject.name);
             //snap[maxshots - shots] = Sprite.Create(tex, rekt, new Vector2(360, 240), 100f, 0, SpriteMeshType.FullRect, Vector4.zero);
             canMove = true;
         }

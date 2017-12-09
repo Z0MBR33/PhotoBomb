@@ -10,7 +10,8 @@ public class logicHandler : MonoBehaviour
     public GameObject[] sceneObjects;
 
     //dynamic scene objects
-    public GameObject[] movingObjects;
+    public GameObject[] movingObjectsList;
+    private List<GameObject> movingObjects = new List<GameObject>();
     public int minFramesBeforeSpawn = 120;
     public float minRandomBeforeSpawn = 0.95f;
     public bool test = false;
@@ -26,25 +27,12 @@ public class logicHandler : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        testStaticRaycasts();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (false /*add check for camera triggering here*/)
-        {
-            if (takenPhotos < 3)
-            {
-                //next three calls are used to calculate earned money.
-                //calculated money will be stored in one of three variables
-                photos[takenPhotos] += testStaticRaycasts();
-                photos[takenPhotos] += testDynamicRaycasts();
-                photos[takenPhotos] += getAmazingAttractions();
-                takenPhotos += 1;
-            }
-        }
-        if (frameCounter > minFramesBeforeSpawn && movingObjects.Length > 0 && spawnLocations.Length > 0)
+        if (frameCounter > minFramesBeforeSpawn && movingObjectsList.Length > 0 && spawnLocations.Length > 0)
         {
             spawnObject();
         }
@@ -55,7 +43,7 @@ public class logicHandler : MonoBehaviour
      * ONLY do this for static objects that can be interacted with or that only overlay from a certain view.
      * Point deduction is not as tragic with static objects as they can't be avoided.
      **/
-    int testStaticRaycasts()
+    public int testStaticRaycasts()
     {
         int money = 0;
         foreach (GameObject sceneObject in sceneObjects)
@@ -78,7 +66,7 @@ public class logicHandler : MonoBehaviour
         return money;
     }
 
-    int testDynamicRaycasts()
+    public int testDynamicRaycasts()
     {
         int money = 0;
         foreach (GameObject movingObject in movingObjects)
@@ -104,7 +92,7 @@ public class logicHandler : MonoBehaviour
     /**
      * Trigger this function to get extra points from amazing attractions, like terrorists, explosions etc.
      * */
-    int getAmazingAttractions()
+    public int getAmazingAttractions()
     {
         int money = 0;
         GameObject[] amazingObjects = GameObject.FindGameObjectsWithTag("amazing");
@@ -124,14 +112,14 @@ public class logicHandler : MonoBehaviour
     /**
      * This function spawns a specified Object at a specified place.
      * */
-    void spawnObject(int objectID, int spawnPointID)
+    public void spawnObject(int objectID, int spawnPointID)
     {
         if (frameCounter > minFramesBeforeSpawn)
         {
             check = Random.value;
             if (check > minRandomBeforeSpawn)
             {
-                Instantiate(movingObjects[objectID], spawnLocations[spawnPointID].transform);
+                movingObjects.Add(Instantiate(movingObjectsList[objectID], spawnLocations[spawnPointID].transform.position, Quaternion.identity));
             }
             frameCounter = 0;
         }
@@ -140,12 +128,12 @@ public class logicHandler : MonoBehaviour
      * This function spawns random GameObjects, as specified in the list movingObjects, at random but set locations, as specified in the list spawnLocations.
      * For control over spawned object and location, use the above function.
      **/
-    void spawnObject()
+    public void spawnObject()
     {
         check = Random.value;
         if (check > minRandomBeforeSpawn)
         {
-            Instantiate(movingObjects[(int)(Random.Range(0.0f, movingObjects.Length + 0.99f))], spawnLocations[(int)(Random.Range(0.0f, spawnLocations.Length + 0.99f))].transform);
+            movingObjects.Add(Instantiate(movingObjectsList[(int)(Random.Range(0.0f, movingObjectsList.Length - 0.01f))], spawnLocations[(int)(Random.Range(0.0f, spawnLocations.Length - 0.01f))].transform.position, Quaternion.identity));
         }
         frameCounter = 0;
     }

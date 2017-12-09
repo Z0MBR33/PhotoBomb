@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: f528d2aa35e234644b94d6e1181cf32f
+timeCreated: 1512857515
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: alt
+    100002: "Deckfl\xE4che_1"
+    100004: "Deckfl\xE4che_2"
+    100006: Kugel
+    100008: Kugel_1
+    100010: Kugel_1_2
+    100012: Kugel_2
+    100014: Kugel_2_2
+    100016: Kugel_3
+    100018: mixamorig:Head
+    100020: mixamorig:HeadTop_End
+    100022: mixamorig:Hips
+    100024: mixamorig:LeftArm
+    100026: mixamorig:LeftFoot
+    100028: mixamorig:LeftForeArm
+    100030: mixamorig:LeftHand
+    100032: mixamorig:LeftHandIndex1
+    100034: mixamorig:LeftHandIndex2
+    100036: mixamorig:LeftHandIndex3
+    100038: mixamorig:LeftHandIndex4
+    100040: mixamorig:LeftLeg
+    100042: mixamorig:LeftShoulder
+    100044: mixamorig:LeftToe_End
+    100046: mixamorig:LeftToeBase
+    100048: mixamorig:LeftUpLeg
+    100050: mixamorig:Neck
+    100052: mixamorig:RightArm
+    100054: mixamorig:RightFoot
+    100056: mixamorig:RightForeArm
+    100058: mixamorig:RightHand
+    100060: mixamorig:RightHandIndex1
+    100062: mixamorig:RightHandIndex2
+    100064: mixamorig:RightHandIndex3
+    100066: mixamorig:RightHandIndex4
+    100068: mixamorig:RightLeg
+    100070: mixamorig:RightShoulder
+    100072: mixamorig:RightToe_End
+    100074: mixamorig:RightToeBase
+    100076: mixamorig:RightUpLeg
+    100078: mixamorig:Spine
+    100080: mixamorig:Spine1
+    100082: mixamorig:Spine2
+    100084: Sweep
+    100086: //RootNode
+    100088: "W\xFCrfel"
+    100090: "W\xFCrfel_1"
+    100092: "W\xFCrfel_2"
+    100094: "W\xFCrfel_2_2"
+    100096: "W\xFCrfel_3"
+    100098: "W\xFCrfel_3_2"
+    100100: "W\xFCrfel_3_3"
+    100102: Zylinder
+    100104: Zylinder_1
+    400000: alt
+    400002: "Deckfl\xE4che_1"
+    400004: "Deckfl\xE4che_2"
+    400006: Kugel
+    400008: Kugel_1
+    400010: Kugel_1_2
+    400012: Kugel_2
+    400014: Kugel_2_2
+    400016: Kugel_3
+    400018: mixamorig:Head
+    400020: mixamorig:HeadTop_End
+    400022: mixamorig:Hips
+    400024: mixamorig:LeftArm
+    400026: mixamorig:LeftFoot
+    400028: mixamorig:LeftForeArm
+    400030: mixamorig:LeftHand
+    400032: mixamorig:LeftHandIndex1
+    400034: mixamorig:LeftHandIndex2
+    400036: mixamorig:LeftHandIndex3
+    400038: mixamorig:LeftHandIndex4
+    400040: mixamorig:LeftLeg
+    400042: mixamorig:LeftShoulder
+    400044: mixamorig:LeftToe_End
+    400046: mixamorig:LeftToeBase
+    400048: mixamorig:LeftUpLeg
+    400050: mixamorig:Neck
+    400052: mixamorig:RightArm
+    400054: mixamorig:RightFoot
+    400056: mixamorig:RightForeArm
+    400058: mixamorig:RightHand
+    400060: mixamorig:RightHandIndex1
+    400062: mixamorig:RightHandIndex2
+    400064: mixamorig:RightHandIndex3
+    400066: mixamorig:RightHandIndex4
+    400068: mixamorig:RightLeg
+    400070: mixamorig:RightShoulder
+    400072: mixamorig:RightToe_End
+    400074: mixamorig:RightToeBase
+    400076: mixamorig:RightUpLeg
+    400078: mixamorig:Spine
+    400080: mixamorig:Spine1
+    400082: mixamorig:Spine2
+    400084: Sweep
+    400086: //RootNode
+    400088: "W\xFCrfel"
+    400090: "W\xFCrfel_1"
+    400092: "W\xFCrfel_2"
+    400094: "W\xFCrfel_2_2"
+    400096: "W\xFCrfel_3"
+    400098: "W\xFCrfel_3_2"
+    400100: "W\xFCrfel_3_3"
+    400102: Zylinder
+    400104: Zylinder_1
+    4300000: Kugel
+    4300002: Sweep
+    4300004: "Deckfl\xE4che_1"
+    4300006: "Deckfl\xE4che_2"
+    4300008: Zylinder_1
+    4300010: Zylinder
+    4300012: "W\xFCrfel"
+    4300014: Kugel_2
+    4300016: Kugel_1_2
+    4300018: Kugel_3
+    4300020: "W\xFCrfel_3_2"
+    4300022: "W\xFCrfel_2"
+    4300024: "W\xFCrfel_1"
+    4300026: "W\xFCrfel_3_3"
+    7400000: mixamo.com
+    9500000: //RootNode
+    13700000: "Deckfl\xE4che_1"
+    13700002: "Deckfl\xE4che_2"
+    13700004: Kugel
+    13700006: Kugel_1_2
+    13700008: Kugel_2
+    13700010: Kugel_3
+    13700012: Sweep
+    13700014: "W\xFCrfel"
+    13700016: "W\xFCrfel_1"
+    13700018: "W\xFCrfel_2"
+    13700020: "W\xFCrfel_3_2"
+    13700022: "W\xFCrfel_3_3"
+    13700024: Zylinder
+    13700026: Zylinder_1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gesicht1
+    second: {fileID: 2100000, guid: 7b65264a2ccae334a96ee8655be1e895, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: haare
+    second: {fileID: 2100000, guid: 5a6efd7ee61f0e9409a4e499ed956baf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hose
+    second: {fileID: 2100000, guid: a28b427f5a2b06140af957b334a31488, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kamera
+    second: {fileID: 2100000, guid: ce7bcec7be97e3b42b10093e877d14a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "kamera_ausl\xF6ser"
+    second: {fileID: 2100000, guid: e6a1cc9ff9a79ef4bb728176f631d8e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kleid
+    second: {fileID: 2100000, guid: e630034b82ef5a344bf7fd64fc6c62a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: schuhe
+    second: {fileID: 2100000, guid: f319a15438778aa4489c3c191f58578b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

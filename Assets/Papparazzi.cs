@@ -16,6 +16,7 @@ public class Papparazzi : MonoBehaviour {
     public float maximumX = 20F;
     public float minimumY = -10F;
     public float maximumY = 10F;
+    public float movementSpeed = 10F;
     // Use this for initialization
     void Start () {
         body = GetComponent<Rigidbody>();
@@ -30,11 +31,11 @@ public class Papparazzi : MonoBehaviour {
 	void Update () {
         if (canMove)
         {
-            moveX += Input.GetAxis("Mouse X") * sensitivityX;
-            moveY += Input.GetAxis("Mouse Y") * sensitivityY;
+            moveX = Input.GetAxis("Mouse X") * sensitivityX;
+            moveY = Input.GetAxis("Mouse Y") * sensitivityY;
             moveX = Mathf.Clamp(moveX + transform.position.x, minimumX, maximumX) - transform.position.x;
             moveY = Mathf.Clamp(moveY + transform.position.y, minimumY, maximumY) - transform.position.y;
-            transform.position = new Vector3(moveX, moveY, originalPosition.z);
+           transform.Translate(moveX, moveY, 0F);
         }
         if (Input.GetMouseButtonDown(0))
         {

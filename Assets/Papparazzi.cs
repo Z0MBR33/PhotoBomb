@@ -44,8 +44,8 @@ public class Papparazzi : MonoBehaviour
         {
             moveX = Input.GetAxis("Mouse X") * sensitivityX;
             moveY = Input.GetAxis("Mouse Y") * sensitivityY;
-            moveX = Mathf.Clamp(moveX + transform.position.x, minimumX, maximumX) - transform.position.x;
-            moveY = Mathf.Clamp(moveY + transform.position.y, minimumY, maximumY) - transform.position.y;
+            moveX = Mathf.Clamp(moveX + transform.position.x, originalPosition.x + minimumX, originalPosition.x + maximumX) - transform.position.x;
+            moveY = Mathf.Clamp(moveY + transform.position.y, originalPosition.y + minimumY, originalPosition.y + maximumY) - transform.position.y;
             transform.Translate(moveX, moveY, 0F);
             if (Input.GetMouseButtonDown(0))
             {

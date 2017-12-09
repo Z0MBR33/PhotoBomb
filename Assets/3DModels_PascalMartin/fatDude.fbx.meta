@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: db9a43b4595ae2042a67c732d26dc930
+timeCreated: 1512841159
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: alt
+    100002: //RootNode
+    100004: Kugel
+    100006: Kugel_1
+    100008: Kugel_2
+    100010: Kugel_3
+    100012: mixamorig:Head
+    100014: mixamorig:HeadTop_End
+    100016: mixamorig:Hips
+    100018: mixamorig:LeftArm
+    100020: mixamorig:LeftFoot
+    100022: mixamorig:LeftForeArm
+    100024: mixamorig:LeftHand
+    100026: mixamorig:LeftHandIndex1
+    100028: mixamorig:LeftHandIndex2
+    100030: mixamorig:LeftHandIndex3
+    100032: mixamorig:LeftHandIndex4
+    100034: mixamorig:LeftLeg
+    100036: mixamorig:LeftShoulder
+    100038: mixamorig:LeftToe_End
+    100040: mixamorig:LeftToeBase
+    100042: mixamorig:LeftUpLeg
+    100044: mixamorig:Neck
+    100046: mixamorig:RightArm
+    100048: mixamorig:RightFoot
+    100050: mixamorig:RightForeArm
+    100052: mixamorig:RightHand
+    100054: mixamorig:RightHandIndex1
+    100056: mixamorig:RightHandIndex2
+    100058: mixamorig:RightHandIndex3
+    100060: mixamorig:RightHandIndex4
+    100062: mixamorig:RightLeg
+    100064: mixamorig:RightShoulder
+    100066: mixamorig:RightToe_End
+    100068: mixamorig:RightToeBase
+    100070: mixamorig:RightUpLeg
+    100072: mixamorig:Spine
+    100074: mixamorig:Spine1
+    100076: mixamorig:Spine2
+    100078: "W\xFCrfel"
+    100080: "W\xFCrfel_1"
+    100082: "W\xFCrfel_1_2"
+    100084: "W\xFCrfel_3"
+    400000: alt
+    400002: //RootNode
+    400004: Kugel
+    400006: Kugel_1
+    400008: Kugel_2
+    400010: Kugel_3
+    400012: mixamorig:Head
+    400014: mixamorig:HeadTop_End
+    400016: mixamorig:Hips
+    400018: mixamorig:LeftArm
+    400020: mixamorig:LeftFoot
+    400022: mixamorig:LeftForeArm
+    400024: mixamorig:LeftHand
+    400026: mixamorig:LeftHandIndex1
+    400028: mixamorig:LeftHandIndex2
+    400030: mixamorig:LeftHandIndex3
+    400032: mixamorig:LeftHandIndex4
+    400034: mixamorig:LeftLeg
+    400036: mixamorig:LeftShoulder
+    400038: mixamorig:LeftToe_End
+    400040: mixamorig:LeftToeBase
+    400042: mixamorig:LeftUpLeg
+    400044: mixamorig:Neck
+    400046: mixamorig:RightArm
+    400048: mixamorig:RightFoot
+    400050: mixamorig:RightForeArm
+    400052: mixamorig:RightHand
+    400054: mixamorig:RightHandIndex1
+    400056: mixamorig:RightHandIndex2
+    400058: mixamorig:RightHandIndex3
+    400060: mixamorig:RightHandIndex4
+    400062: mixamorig:RightLeg
+    400064: mixamorig:RightShoulder
+    400066: mixamorig:RightToe_End
+    400068: mixamorig:RightToeBase
+    400070: mixamorig:RightUpLeg
+    400072: mixamorig:Spine
+    400074: mixamorig:Spine1
+    400076: mixamorig:Spine2
+    400078: "W\xFCrfel"
+    400080: "W\xFCrfel_1"
+    400082: "W\xFCrfel_1_2"
+    400084: "W\xFCrfel_3"
+    4300000: Kugel_3
+    4300002: Kugel_2
+    4300004: Kugel_1
+    4300006: Kugel
+    4300008: "W\xFCrfel_3"
+    4300010: "W\xFCrfel_1"
+    4300012: "W\xFCrfel_1_2"
+    4300014: "W\xFCrfel"
+    7400000: mixamo.com
+    9500000: //RootNode
+    13700000: Kugel
+    13700002: Kugel_1
+    13700004: Kugel_2
+    13700006: Kugel_3
+    13700008: "W\xFCrfel"
+    13700010: "W\xFCrfel_1"
+    13700012: "W\xFCrfel_1_2"
+    13700014: "W\xFCrfel_3"
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: 3ddeca5b000d4334696d15b5df848c40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gesicht1
+    second: {fileID: 2100000, guid: a17a26fdd43c2634c8a3f40cc52c0f07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: haare
+    second: {fileID: 2100000, guid: 958de1069d4ccf64b943915529e2d631, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hose
+    second: {fileID: 2100000, guid: 5d6d180868aff6c4aa01598c81eb8f7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pulli
+    second: {fileID: 2100000, guid: a745501b293a9c24787ff60ed65a4012, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\xE4rmel"
+    second: {fileID: 2100000, guid: dd83214e634ee3942ad7a8d30b3724a0, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

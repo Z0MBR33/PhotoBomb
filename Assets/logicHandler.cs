@@ -49,7 +49,7 @@ public class logicHandler : MonoBehaviour
         foreach (GameObject sceneObject in sceneObjects)
         {
             RaycastHit hit;
-            Physics.Raycast(this.transform.position, this.transform.position + Camera.main.transform.position, out hit);
+            Physics.Raycast(sceneObject.transform.position, sceneObject.transform.position - Camera.main.transform.position, out hit);
             if (hit.collider != null)
             {
                 switch (hit.collider.gameObject.tag)
@@ -68,16 +68,18 @@ public class logicHandler : MonoBehaviour
 
     public int testDynamicRaycasts()
     {
+        Debug.Log("in dynamicraycasts");
         int money = 0;
         foreach (GameObject movingObject in movingObjects)
         {
             RaycastHit hit;
-            Physics.Raycast(this.transform.position, this.transform.position + Camera.main.transform.position, out hit);
+            Physics.Raycast(movingObject.transform.position, movingObject.transform.position - Camera.main.transform.position, out hit);
             if (hit.collider != null)
             {
+                Debug.Log("in hit");
                 switch (hit.collider.gameObject.tag)
                 {
-                    case "verygood": money -= 50; break;
+                    case "verygood": money -= 50 ; break;
                     case "good": money -= 10; break;
                     case "bad": money += 10; break;
                     case "verybad": money += 50; break;

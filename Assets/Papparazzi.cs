@@ -18,7 +18,7 @@ public class Papparazzi : MonoBehaviour
     float moveY = 0F;
     public float minimumX = -10F;
     public float maximumX = 10F;
-    public float minimumY = -5F;
+    public float minimumY = 0;
     public float maximumY = 5F;
     public float movementSpeed = 5F;
     int[] monies;
@@ -70,6 +70,7 @@ public class Papparazzi : MonoBehaviour
             if (GUI.Button(new Rect(Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[0]))
             {
                 GameValues.accMoney += monies[0];
+                Debug.Log("Total$: " + GameValues.accMoney);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             }
 
@@ -77,30 +78,35 @@ public class Papparazzi : MonoBehaviour
                 if (GUI.Button(new Rect(2 * Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[1]))
                 {
                     GameValues.accMoney += monies[1];
+                    Debug.Log("Total$: " + GameValues.accMoney);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             if (maxshots > 2) 
                 if (GUI.Button(new Rect(3 * Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[2]))
                 {
                     GameValues.accMoney += monies[2];
+                    Debug.Log("Total$: " + GameValues.accMoney);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             if (maxshots > 3)
                 if (GUI.Button(new Rect(Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[3]))
                 {
                     GameValues.accMoney += monies[3];
+                    Debug.Log("Total$: " + GameValues.accMoney);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             if (maxshots > 4)
                 if (GUI.Button(new Rect(2 * Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[4]))
                 {
                     GameValues.accMoney += monies[4];
+                    Debug.Log("Total$: " + GameValues.accMoney);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             if (maxshots > 5)
                 if (GUI.Button(new Rect(3 * Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[5]))
                 {
                     GameValues.accMoney += monies[5];
+                    Debug.Log("Total$: " + GameValues.accMoney);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
 

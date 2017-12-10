@@ -10,6 +10,7 @@ public class Papparazzi : MonoBehaviour
     Rigidbody body;
     Quaternion originalRotation;
     Vector3 originalPosition;
+    bool notPressed;
     private int shots;
     public int maxshots = 3;
     private bool canMove = false;
@@ -42,6 +43,7 @@ public class Papparazzi : MonoBehaviour
         shots = maxshots;
         snap = new Texture2D[maxshots];
         monies = new int[maxshots];
+        notPressed = true;
     }
 
     // Update is called once per frame
@@ -71,52 +73,67 @@ public class Papparazzi : MonoBehaviour
         if (shots == 0)
         {
             canMove = false;
+            if(notPressed)
             if (GUI.Button(new Rect(Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[0]))
             {
                 GameValues.accMoney += monies[0];
                 Debug.Log("Total$: " + GameValues.accMoney);
+                    notPressed = false;
                 startZeitung(0);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             }
 
-            if (maxshots > 1)
+            if (notPressed)
+                if (maxshots > 1)
                 if (GUI.Button(new Rect(2 * Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[1]))
                 {
                     GameValues.accMoney += monies[1];
                     Debug.Log("Total$: " + GameValues.accMoney);
-                    startZeitung(1);
+                        notPressed = false;
+                        startZeitung(1);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                }
-            if (maxshots > 2) 
+                    }
+            if (notPressed)
+                if (maxshots > 2) 
                 if (GUI.Button(new Rect(3 * Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[2]))
                 {
                     GameValues.accMoney += monies[2];
                     Debug.Log("Total$: " + GameValues.accMoney);
-                    startZeitung(2);
+                        notPressed = false;
+                        startZeitung(2);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
-            if (maxshots > 3)
+
+            if (notPressed)
+                if (maxshots > 3)
                 if (GUI.Button(new Rect(Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[3]))
                 {
                     GameValues.accMoney += monies[3];
                     Debug.Log("Total$: " + GameValues.accMoney);
-                    startZeitung(3);
+                        notPressed = false;
+                        startZeitung(3);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
-            if (maxshots > 4)
+
+            if (notPressed)
+                if (maxshots > 4)
                 if (GUI.Button(new Rect(2 * Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[4]))
                 {
                     GameValues.accMoney += monies[4];
                     Debug.Log("Total$: " + GameValues.accMoney);
-                    startZeitung(4);
+                        notPressed = false;
+                        startZeitung(4);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
-            if (maxshots > 5)
+
+            if (notPressed)
+                if (maxshots > 5)
                 if (GUI.Button(new Rect(3 * Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[5]))
                 {
                     GameValues.accMoney += monies[5];
-                    Debug.Log("Total$: " + GameValues.accMoney);
-                    startZeitung(5);
+                        Debug.Log("Total$: " + GameValues.accMoney);
+                        notPressed = false;
+                        startZeitung(5);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
 

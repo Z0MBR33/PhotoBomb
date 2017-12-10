@@ -14,14 +14,14 @@ public class Papparazzi : MonoBehaviour
     private int shots;
     public int maxshots = 3;
     private bool canMove = false;
-    public float sensitivityX = 5F;
-    public float sensitivityY = 5F;
+    public float sensitivityX = .7F;
+    public float sensitivityY = .7F;
     float moveX = 0F;
     float moveY = 0F;
     public float minimumX = -10F;
     public float maximumX = 10F;
     public float minimumY = 0;
-    public float maximumY = 5F;
+    public float maximumY = 10F;
     public float movementSpeed = 5F;
     int[] monies;
     private static int money;
@@ -44,6 +44,7 @@ public class Papparazzi : MonoBehaviour
         snap = new Texture2D[maxshots];
         monies = new int[maxshots];
         notPressed = true;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -72,6 +73,7 @@ public class Papparazzi : MonoBehaviour
     {
         if (shots == 0)
         {
+            Cursor.visible = true;
             canMove = false;
             if(notPressed)
             if (GUI.Button(new Rect(Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[0]))

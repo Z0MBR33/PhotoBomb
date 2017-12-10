@@ -8,26 +8,21 @@ public class Titlescreen : MonoBehaviour {
 
     private Button startButton;
     private Button howtoButton;
+    public Text howtoText;
     private Button exitButton;
     public Animator playerAnimator;
     public Image blitz;
     private bool startFlash;
     public float blitzSpeed;
-    private bool lerpButtonSize;
-    private float buttonLerp;
-    private Vector2 startSize;
-    private Vector2 endSize;
 
     // Use this for initialization
     void Start () {
         startButton = GetComponentsInChildren<Button>()[0];
-        startButton.onClick.AddListener(startPressed);
-        //howtoButton = GetComponentsInChildren<Button>()[1];
-        //howtoButton.onClick.AddListener(howtoPressed);
-        exitButton = GetComponentsInChildren<Button>()[1];
-        exitButton.onClick.AddListener(exitPressed);
-        startSize = howtoButton.image.rectTransform.sizeDelta;
-        endSize = new Vector2(Screen.width - Screen.width / 20, startSize.y);
+        startButton.onClick.AddListener(StartPressed);
+        howtoButton = GetComponentsInChildren<Button>()[1];
+        howtoButton.onClick.AddListener(HowtoPressed);
+        exitButton = GetComponentsInChildren<Button>()[2];
+        exitButton.onClick.AddListener(ExitPressed);
     }
 
     // Update is called once per frame
@@ -36,45 +31,45 @@ public class Titlescreen : MonoBehaviour {
         {
             blitz.gameObject.transform.localScale += new Vector3(Time.deltaTime * blitzSpeed, Time.deltaTime * blitzSpeed, Time.deltaTime * blitzSpeed);
         }
-        if (lerpButtonSize)
-        {
-            howtoButton.image.rectTransform.sizeDelta = Vector2.Lerp( startSize, endSize, buttonLerp);
-            buttonLerp += Time.deltaTime;
-        }
     }
 
-    void startPressed()
+    void StartPressed()
     {
         playerAnimator.SetBool("takePic", true);
         Invoke("flash", 1f);
         Invoke("startPressed2", 1.2f);
     }
 
-    void howtoPressed()
+    void HowtoPressed()
     {
-        buttonLerp = 0;
-        lerpButtonSize = true;
+        if (howtoText.GetComponent<Animator>().GetBool("isActivated")) {
+            howtoText.GetComponent<Animator>().SetBool("isActivated", false);
+        }
+        else
+        {
+            howtoText.GetComponent<Animator>().SetBool("isActivated", true);
+        }
     }
 
-    void exitPressed()
+    void ExitPressed()
     {
         playerAnimator.SetBool("takePic", true);
         Invoke("flash", 1f);
         Invoke("exitPressed2", 1.2f);
     }
 
-    void flash()
+    void Flash()
     {
         blitz.gameObject.SetActive(true);
         startFlash = true;
     }
 
-    void startPressed2()
+    void StartPressed2()
     {
         SceneManager.LoadScene("BrandenburgertorScene");
     }
 
-    void exitPressed2()
+    void ExitPressed2()
     {
         Application.Quit();
     }

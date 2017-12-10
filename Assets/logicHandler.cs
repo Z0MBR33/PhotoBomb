@@ -73,7 +73,7 @@ public class logicHandler : MonoBehaviour
         foreach (GameObject movingObject in movingObjects)
         {
             RaycastHit hit;
-            Physics.Raycast(movingObject.transform.position, movingObject.transform.position - Camera.main.transform.position, out hit);
+            Physics.Raycast(movingObject.transform.position+(new Vector3(0, movingObject.GetComponent<Collider>().bounds.size.y/2.0f, 0)), movingObject.transform.position - Camera.main.transform.position, out hit);
             if (hit.collider != null)
             {
                 Debug.Log("in hit");

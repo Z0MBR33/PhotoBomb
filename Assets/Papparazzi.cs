@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Papparazzi : MonoBehaviour
 {
@@ -26,11 +27,14 @@ public class Papparazzi : MonoBehaviour
     Rect rekt;
     Texture2D[] snap;
     public logicHandler handler;
+    public RawImage zeitung;
+    private RawImage zeitungsbild;
 
     // Use this for initialization
     void Start()
     {
-        rekt = new Rect(Screen.width / 3, Screen.height / 3, Screen.width / 3, Screen.height / 3);
+        zeitungsbild = zeitung.GetComponentsInChildren<RawImage>()[1];
+        rekt = new Rect(Screen.width / 3, Screen.height / 3, Screen.width / 2, Screen.height / 2);
         body = GetComponent<Rigidbody>();
         if (body)
             body.freezeRotation = true;
@@ -71,6 +75,7 @@ public class Papparazzi : MonoBehaviour
             {
                 GameValues.accMoney += monies[0];
                 Debug.Log("Total$: " + GameValues.accMoney);
+                startZeitung(0);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             }
 
@@ -79,6 +84,7 @@ public class Papparazzi : MonoBehaviour
                 {
                     GameValues.accMoney += monies[1];
                     Debug.Log("Total$: " + GameValues.accMoney);
+                    startZeitung(1);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             if (maxshots > 2) 
@@ -86,6 +92,7 @@ public class Papparazzi : MonoBehaviour
                 {
                     GameValues.accMoney += monies[2];
                     Debug.Log("Total$: " + GameValues.accMoney);
+                    startZeitung(2);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             if (maxshots > 3)
@@ -93,6 +100,7 @@ public class Papparazzi : MonoBehaviour
                 {
                     GameValues.accMoney += monies[3];
                     Debug.Log("Total$: " + GameValues.accMoney);
+                    startZeitung(3);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             if (maxshots > 4)
@@ -100,6 +108,7 @@ public class Papparazzi : MonoBehaviour
                 {
                     GameValues.accMoney += monies[4];
                     Debug.Log("Total$: " + GameValues.accMoney);
+                    startZeitung(4);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             if (maxshots > 5)
@@ -107,11 +116,19 @@ public class Papparazzi : MonoBehaviour
                 {
                     GameValues.accMoney += monies[5];
                     Debug.Log("Total$: " + GameValues.accMoney);
+                    startZeitung(5);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
 
             //TODO: LevelOutro->ChangeLevel
         }
+    }
+
+    void startZeitung(int whichImage)
+    {
+        zeitung.gameObject.SetActive(true);
+        zeitung.GetComponent<Animator>().Play("zeitung");
+        zeitungsbild.texture = snap[whichImage];
     }
 
     void OnPostRender()
@@ -124,7 +141,7 @@ public class Papparazzi : MonoBehaviour
         Camera.onPostRender -= Snap;
         if (shots > 0)
         {
-            snap[maxshots - shots] = new Texture2D(720, 480);
+            snap[maxshots - shots] = new Texture2D(Screen.width/2, Screen.height/2);
             snap[maxshots - shots].ReadPixels(rekt, 0, 0);
             snap[maxshots - shots].Apply();
             shots--;

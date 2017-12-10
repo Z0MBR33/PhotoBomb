@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Titlescreen.unity
+    guid: 275cfa3298ad1ad40aad00d7ce1f7df3
+  - enabled: 1
+    path: Assets/BrandenburgertorScene.unity
+    guid: 79dbc9ab2cc3c2c43937e9fb02ebc0df

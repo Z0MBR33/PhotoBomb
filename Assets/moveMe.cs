@@ -14,9 +14,16 @@ public class moveMe : MonoBehaviour {
 
     public int animNum;
     public float speed;
+
     private Animator myAnim;
+    public GameObject myRagDoll;
+    public GameObject myAnimationRig;
+    private Rigidbody myRigid;
+    private CapsuleCollider myCapCol;
+
     private bool start = false;
     private float myRandomScale;
+    
 
 
     // Use this for initialization
@@ -24,11 +31,13 @@ public class moveMe : MonoBehaviour {
         myAnim = GetComponent<Animator>();
         randomScale();
         randomWalkStyle();
+        myCapCol = GetComponent<CapsuleCollider>();
+        myRigid = GetComponent<Rigidbody>();
 	}
 
     private void randomScale()
     {
-        myRandomScale = UnityEngine.Random.Range(0.15f, 0.35f);
+        myRandomScale = UnityEngine.Random.Range(0.15f, 0.25f);
         gameObject.transform.localScale =new Vector3(myRandomScale,myRandomScale,myRandomScale);
     }
 
@@ -47,4 +56,34 @@ public class moveMe : MonoBehaviour {
         }
         
 	}
+
+    void SwitchMode()
+    {
+        myRigid.isKinematic = true;
+        myCapCol.enabled = false;
+        myAnim.enabled = false;
+        myRagDoll.SetActive(true);
+        myAnimationRig.SetActive(false);
+        start = false;
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.GetComponent<moveMe>() != null || other.gameObject.GetComponentInParent<moveMe>() != null)
+        {
+
+                SwitchMode();
+
+        }
+            /*
+            if(other.gameObject.GetComponent<moveMe>() != null || other.gameObject.GetComponentInParent<moveMe>() != null)
+            {
+                if(other.gameObject.GetComponent<moveMe>().myRagDoll == false)
+                {
+                    other.gameObject.GetComponent<moveMe>().SwitchMode();
+                }
+                SwitchMode();
+            }
+            */
+        }
 }

@@ -32,6 +32,39 @@ ModelImporter:
     100048: mixamorig_Spine
     100050: mixamorig_Spine1
     100052: mixamorig_Spine2
+    100054: mixamorig:Head
+    100056: mixamorig:HeadTop_End
+    100058: mixamorig:Hips
+    100060: mixamorig:LeftArm
+    100062: mixamorig:LeftFoot
+    100064: mixamorig:LeftForeArm
+    100066: mixamorig:LeftHand
+    100068: mixamorig:LeftHandIndex1
+    100070: mixamorig:LeftHandIndex2
+    100072: mixamorig:LeftHandIndex3
+    100074: mixamorig:LeftHandIndex4
+    100076: mixamorig:LeftLeg
+    100078: mixamorig:LeftShoulder
+    100080: mixamorig:LeftToe_End
+    100082: mixamorig:LeftToeBase
+    100084: mixamorig:LeftUpLeg
+    100086: mixamorig:Neck
+    100088: mixamorig:RightArm
+    100090: mixamorig:RightFoot
+    100092: mixamorig:RightForeArm
+    100094: mixamorig:RightHand
+    100096: mixamorig:RightHandIndex1
+    100098: mixamorig:RightHandIndex2
+    100100: mixamorig:RightHandIndex3
+    100102: mixamorig:RightHandIndex4
+    100104: mixamorig:RightLeg
+    100106: mixamorig:RightShoulder
+    100108: mixamorig:RightToe_End
+    100110: mixamorig:RightToeBase
+    100112: mixamorig:RightUpLeg
+    100114: mixamorig:Spine
+    100116: mixamorig:Spine1
+    100118: mixamorig:Spine2
     400000: alt_2
     400002: //RootNode
     400004: mixamorig_Head
@@ -59,7 +92,41 @@ ModelImporter:
     400048: mixamorig_Spine
     400050: mixamorig_Spine1
     400052: mixamorig_Spine2
+    400054: mixamorig:Head
+    400056: mixamorig:HeadTop_End
+    400058: mixamorig:Hips
+    400060: mixamorig:LeftArm
+    400062: mixamorig:LeftFoot
+    400064: mixamorig:LeftForeArm
+    400066: mixamorig:LeftHand
+    400068: mixamorig:LeftHandIndex1
+    400070: mixamorig:LeftHandIndex2
+    400072: mixamorig:LeftHandIndex3
+    400074: mixamorig:LeftHandIndex4
+    400076: mixamorig:LeftLeg
+    400078: mixamorig:LeftShoulder
+    400080: mixamorig:LeftToe_End
+    400082: mixamorig:LeftToeBase
+    400084: mixamorig:LeftUpLeg
+    400086: mixamorig:Neck
+    400088: mixamorig:RightArm
+    400090: mixamorig:RightFoot
+    400092: mixamorig:RightForeArm
+    400094: mixamorig:RightHand
+    400096: mixamorig:RightHandIndex1
+    400098: mixamorig:RightHandIndex2
+    400100: mixamorig:RightHandIndex3
+    400102: mixamorig:RightHandIndex4
+    400104: mixamorig:RightLeg
+    400106: mixamorig:RightShoulder
+    400108: mixamorig:RightToe_End
+    400110: mixamorig:RightToeBase
+    400112: mixamorig:RightUpLeg
+    400114: mixamorig:Spine
+    400116: mixamorig:Spine1
+    400118: mixamorig:Spine2
     4300000: alt_2
+    7400000: mixamo.com
     9500000: //RootNode
     13700000: alt_2
   externalObjects:
@@ -67,27 +134,27 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: man_gesicht
-    second: {fileID: 2100000, guid: 80ea8f97e5d43f94abd539a0730aed67, type: 2}
+    second: {fileID: 2100000, guid: d2a96f018a2e98c4a9f222dfed0a1694, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: man_haare
-    second: {fileID: 2100000, guid: 89c9af5f758e909429258d1bf44ca622, type: 2}
+    second: {fileID: 2100000, guid: d77312ffc11999546888855896f50753, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: man_hose
-    second: {fileID: 2100000, guid: 93de6c51b5f591040a5a6e4d23a254f8, type: 2}
+    second: {fileID: 2100000, guid: 3c1d86eb3238cf646b48accf430416d5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: man_pulli
-    second: {fileID: 2100000, guid: 28358778473703342b14e1831916a71c, type: 2}
+    second: {fileID: 2100000, guid: 60f0157d902d69247a35c9273f11dfe8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: man_schuhe
-    second: {fileID: 2100000, guid: a84041015b456cb499592e167b99189e, type: 2}
+    second: {fileID: 2100000, guid: 41203e88160468247b7b49a4a2206d37, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

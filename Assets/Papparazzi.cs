@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Papparazzi : MonoBehaviour
 {
@@ -20,21 +21,23 @@ public class Papparazzi : MonoBehaviour
     public float minimumY = -5F;
     public float maximumY = 5F;
     public float movementSpeed = 5F;
-    int[] monies = new int[] { 0, 0, 0 };
+    int[] monies;
     private static int money;
     Rect rekt;
-    Texture2D[] snap = new Texture2D[3];
+    Texture2D[] snap;
     public logicHandler handler;
 
     // Use this for initialization
     void Start()
     {
-        rekt = new Rect(Screen.width / 2 - 360, Screen.height / 2 - 240, 720, 480);
+        rekt = new Rect(Screen.width / 3, Screen.height / 3, Screen.width / 3, Screen.height / 3);
         body = GetComponent<Rigidbody>();
         if (body)
             body.freezeRotation = true;
         originalPosition = transform.position;
         shots = maxshots;
+        snap = new Texture2D[maxshots];
+        monies = new int[maxshots];
     }
 
     // Update is called once per frame
@@ -64,19 +67,42 @@ public class Papparazzi : MonoBehaviour
         if (shots == 0)
         {
             canMove = false;
-
-            if (GUI.Button(new Rect(100, 100, 288, 192), (Texture)snap[0]))
+            if (GUI.Button(new Rect(Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[0]))
             {
-
+                GameValues.accMoney += monies[0];
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             }
-            if (GUI.Button(new Rect(400, 100, 288, 192), (Texture)snap[1]))
-            {
 
-            }
-            if (GUI.Button(new Rect(700, 100, 288, 192), (Texture)snap[2]))
-            {
-
-            }
+            if (maxshots > 1)
+                if (GUI.Button(new Rect(2 * Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[1]))
+                {
+                    GameValues.accMoney += monies[1];
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+            if (maxshots > 2) 
+                if (GUI.Button(new Rect(3 * Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[2]))
+                {
+                    GameValues.accMoney += monies[2];
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+            if (maxshots > 3)
+                if (GUI.Button(new Rect(Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[3]))
+                {
+                    GameValues.accMoney += monies[3];
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+            if (maxshots > 4)
+                if (GUI.Button(new Rect(2 * Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[4]))
+                {
+                    GameValues.accMoney += monies[4];
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+            if (maxshots > 5)
+                if (GUI.Button(new Rect(3 * Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[5]))
+                {
+                    GameValues.accMoney += monies[5];
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
 
             //TODO: LevelOutro->ChangeLevel
         }
@@ -92,12 +118,10 @@ public class Papparazzi : MonoBehaviour
         Camera.onPostRender -= Snap;
         if (shots > 0)
         {
-            //TODO: Snapshot
             snap[maxshots - shots] = new Texture2D(720, 480);
             snap[maxshots - shots].ReadPixels(rekt, 0, 0);
             snap[maxshots - shots].Apply();
             shots--;
-            //snap[maxshots - shots] = Sprite.Create(tex, rekt, new Vector2(360, 240), 100f, 0, SpriteMeshType.FullRect, Vector4.zero);
             canMove = true;
         }
 

@@ -15,5 +15,5 @@ EditorBuildSettings:
     path: Assets/PyramidsScene.unity
     guid: f527592c19b322f4a97a8f4b55bb9fd9
   - enabled: 1
-    path: Assets/LondonEyeScene.unity
-    guid: c9daa6dad78ff0845b978edf4e3ec473
+    path: Assets/Credits.unity
+    guid: ac97d948313fcf94f900c50f47dc174f

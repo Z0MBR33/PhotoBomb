@@ -36,8 +36,8 @@ public class Titlescreen : MonoBehaviour {
     void StartPressed()
     {
         playerAnimator.SetBool("takePic", true);
-        Invoke("flash", 1f);
-        Invoke("startPressed2", 1.2f);
+        Invoke("Flash", 1f);
+        Invoke("StartPressed2", 1.2f);
     }
 
     void HowtoPressed()
@@ -54,8 +54,8 @@ public class Titlescreen : MonoBehaviour {
     void ExitPressed()
     {
         playerAnimator.SetBool("takePic", true);
-        Invoke("flash", 1f);
-        Invoke("exitPressed2", 1.2f);
+        Invoke("Flash", 1f);
+        Invoke("ExitPressed2", 1.2f);
     }
 
     void Flash()
@@ -66,7 +66,7 @@ public class Titlescreen : MonoBehaviour {
 
     void StartPressed2()
     {
-        SceneManager.LoadScene("BrandenburgertorScene");
+        SceneManager.LoadScene(1);
     }
 
     void ExitPressed2()

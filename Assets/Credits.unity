@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -179,7 +179,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'J. Schreibeis
+
+'
 --- !u!222 &18247270
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -210,7 +212,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 45110489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 24.5, y: 0, z: 0}
   m_LocalScale: {x: 0.3984099, y: 0.3984099, z: 0.3984099}
   m_Children: []
   m_Father: {fileID: 812077508}
@@ -218,8 +220,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 238.98, y: 71.3}
+  m_AnchoredPosition: {x: 24.5, y: 0}
+  m_SizeDelta: {x: 361.9, y: 71.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45110491
 MonoBehaviour:
@@ -253,7 +255,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Martin Beyrle
 --- !u!222 &45110492
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -543,7 +545,8 @@ MonoBehaviour:
   fatDude: {fileID: 471719169}
   zoomOverTime: 1.1
   offset: 0.7
-  pressAnyKey: {fileID: 1075444719}
+  pressAnyKey: {fileID: 852018851}
+  score: {fileID: 2054673201}
 --- !u!1 &471719169 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1355321141089528, guid: 36c955347fe37f24f81fc254caf364dc,
@@ -664,7 +667,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 630646691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10.119995, y: 0, z: 0}
   m_LocalScale: {x: 0.3984099, y: 0.3984099, z: 0.3984099}
   m_Children: []
   m_Father: {fileID: 645632133}
@@ -672,8 +675,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 238.98, y: 71.3}
+  m_AnchoredPosition: {x: 10.12, y: 0}
+  m_SizeDelta: {x: 289.77, y: 71.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &630646693
 MonoBehaviour:
@@ -707,7 +710,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Leonid Petrov
+
+'
 --- !u!222 &630646694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -974,7 +979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &852018852
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1049,7 +1054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1075444720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1114,10 +1119,11 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1075444719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 138.5, y: 365.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 364, y: 205, z: 0}
+  m_LocalScale: {x: 0.37916666, y: 0.37916666, z: 0.37916666}
   m_Children:
   - {fileID: 852018852}
+  - {fileID: 2054673200}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1244,7 +1250,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1524682558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -29.369995, y: 0, z: 0}
   m_LocalScale: {x: 0.3984099, y: 0.3984099, z: 0.3984099}
   m_Children: []
   m_Father: {fileID: 1642235930}
@@ -1252,8 +1258,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 238.98, y: 71.3}
+  m_AnchoredPosition: {x: -29.37, y: 0}
+  m_SizeDelta: {x: 386.4, y: 71.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524682560
 MonoBehaviour:
@@ -1287,7 +1293,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Sonja Stefani
+
+'
 --- !u!222 &1524682561
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1604,7 +1612,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1764377190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -9.339996, y: 0, z: 0}
   m_LocalScale: {x: 0.3984099, y: 0.3984099, z: 0.3984099}
   m_Children: []
   m_Father: {fileID: 1246059049}
@@ -1612,8 +1620,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 238.98, y: 71.3}
+  m_AnchoredPosition: {x: -9.34, y: 0}
+  m_SizeDelta: {x: 285.85, y: 71.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1764377192
 MonoBehaviour:
@@ -1647,7 +1655,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Pascal Plewa
+
+'
 --- !u!222 &1764377193
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1728,3 +1738,77 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1957781064}
+--- !u!1 &2054673199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2054673200}
+  - component: {fileID: 2054673202}
+  - component: {fileID: 2054673201}
+  m_Layer: 5
+  m_Name: score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2054673200
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2054673199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -509, y: 337.65936, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1075444723}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 451, y: -203}
+  m_SizeDelta: {x: 742.88, y: 249.40002}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2054673201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2054673199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 32da71b48acdf804fb82b47f17bd3567, type: 3}
+    m_FontSize: 80
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 130
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'final score: '
+--- !u!222 &2054673202
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2054673199}

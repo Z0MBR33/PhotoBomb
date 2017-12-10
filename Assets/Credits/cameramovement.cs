@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class cameramovement : MonoBehaviour {
 
@@ -9,10 +10,12 @@ public class cameramovement : MonoBehaviour {
     public float zoomOverTime;
     public float offset;
     public GameObject pressAnyKey;
+    public Text score;
 
     // Use this for initialization
     void Start () {
         fatDude.GetComponent<Animator>().SetInteger("randomWalk", 1);
+        score.text = "FINAL SCORE: " +GameValues.accMoney.ToString();
 	}
 	
 	// Update is called once per frame

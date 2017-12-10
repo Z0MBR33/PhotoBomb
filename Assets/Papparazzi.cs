@@ -35,7 +35,7 @@ public class Papparazzi : MonoBehaviour
     void Start()
     {
         zeitungsbild = zeitung.GetComponentsInChildren<RawImage>()[1];
-        rekt = new Rect(Screen.width / 3, Screen.height / 3, Screen.width / 2, Screen.height / 2);
+        rekt = Rect.MinMaxRect(100, 100, Screen.width -100, Screen.height -100);
         body = GetComponent<Rigidbody>();
         if (body)
             body.freezeRotation = true;
@@ -65,7 +65,9 @@ public class Papparazzi : MonoBehaviour
                 Camera.onPostRender += Snap;
             }
         }
-
+        if (!notPressed)
+            if(Input.anyKeyDown)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 
@@ -82,7 +84,6 @@ public class Papparazzi : MonoBehaviour
                 Debug.Log("Total$: " + GameValues.accMoney);
                     notPressed = false;
                 startZeitung(0);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             }
 
             if (notPressed)
@@ -93,7 +94,6 @@ public class Papparazzi : MonoBehaviour
                     Debug.Log("Total$: " + GameValues.accMoney);
                         notPressed = false;
                         startZeitung(1);
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                     }
             if (notPressed)
                 if (maxshots > 2) 
@@ -103,7 +103,6 @@ public class Papparazzi : MonoBehaviour
                     Debug.Log("Total$: " + GameValues.accMoney);
                         notPressed = false;
                         startZeitung(2);
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
 
             if (notPressed)
@@ -114,7 +113,6 @@ public class Papparazzi : MonoBehaviour
                     Debug.Log("Total$: " + GameValues.accMoney);
                         notPressed = false;
                         startZeitung(3);
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
 
             if (notPressed)
@@ -125,7 +123,6 @@ public class Papparazzi : MonoBehaviour
                     Debug.Log("Total$: " + GameValues.accMoney);
                         notPressed = false;
                         startZeitung(4);
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
 
             if (notPressed)
@@ -136,7 +133,6 @@ public class Papparazzi : MonoBehaviour
                         Debug.Log("Total$: " + GameValues.accMoney);
                         notPressed = false;
                         startZeitung(5);
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
 
             //TODO: LevelOutro->ChangeLevel

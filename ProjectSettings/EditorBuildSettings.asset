@@ -11,3 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BrandenburgertorScene.unity
     guid: 79dbc9ab2cc3c2c43937e9fb02ebc0df
+  - enabled: 1
+    path: Assets/PyramidsScene.unity
+    guid: f527592c19b322f4a97a8f4b55bb9fd9
+  - enabled: 1
+    path: Assets/LondonEyeScene.unity
+    guid: c9daa6dad78ff0845b978edf4e3ec473

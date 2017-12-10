@@ -10,6 +10,8 @@ TagManager:
   - good
   - bad
   - verybad
+  - upperShutter
+  - lowerShutter
   layers:
   - Default
   - TransparentFX

@@ -2709,7 +2709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animNum: 0
   speed: 0
-  myRagDoll: {fileID: 0}
+  myRagDoll: {fileID: 1551930288256732}
   myAnimationRig: {fileID: 1551930288256732}
 --- !u!135 &135803855065731270
 SphereCollider:

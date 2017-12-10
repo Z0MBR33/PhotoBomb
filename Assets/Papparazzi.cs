@@ -25,7 +25,6 @@ public class Papparazzi : MonoBehaviour
     public float movementSpeed = 5F;
     int[] monies;
     private static int money;
-    Rect rekt;
     Texture2D[] snap;
     public logicHandler handler;
     public RawImage zeitung;
@@ -35,7 +34,6 @@ public class Papparazzi : MonoBehaviour
     void Start()
     {
         zeitungsbild = zeitung.GetComponentsInChildren<RawImage>()[1];
-        rekt = Rect.MinMaxRect(100, 100, Screen.width -100, Screen.height -100);
         body = GetComponent<Rigidbody>();
         if (body)
             body.freezeRotation = true;
@@ -78,7 +76,7 @@ public class Papparazzi : MonoBehaviour
             Cursor.visible = true;
             canMove = false;
             if(notPressed)
-            if (GUI.Button(new Rect(Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[0]))
+            if (GUI.Button(new Rect(Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), (Texture) snap[0]))
             {
                 GameValues.accMoney += monies[0];
                 Debug.Log("Total$: " + GameValues.accMoney);
@@ -88,7 +86,7 @@ public class Papparazzi : MonoBehaviour
 
             if (notPressed)
                 if (maxshots > 1)
-                if (GUI.Button(new Rect(2 * Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[1]))
+                if (GUI.Button(new Rect(2 * Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5),(Texture) snap[1]))
                 {
                     GameValues.accMoney += monies[1];
                     Debug.Log("Total$: " + GameValues.accMoney);
@@ -97,7 +95,7 @@ public class Papparazzi : MonoBehaviour
                     }
             if (notPressed)
                 if (maxshots > 2) 
-                if (GUI.Button(new Rect(3 * Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[2]))
+                if (GUI.Button(new Rect(3 * Screen.width / 4, Screen.height / 4, Screen.width / 5, Screen.height / 5), (Texture)snap[2]))
                 {
                     GameValues.accMoney += monies[2];
                     Debug.Log("Total$: " + GameValues.accMoney);
@@ -107,7 +105,7 @@ public class Papparazzi : MonoBehaviour
 
             if (notPressed)
                 if (maxshots > 3)
-                if (GUI.Button(new Rect(Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[3]))
+                if (GUI.Button(new Rect(Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), (Texture)snap[3]))
                 {
                     GameValues.accMoney += monies[3];
                     Debug.Log("Total$: " + GameValues.accMoney);
@@ -117,7 +115,7 @@ public class Papparazzi : MonoBehaviour
 
             if (notPressed)
                 if (maxshots > 4)
-                if (GUI.Button(new Rect(2 * Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[4]))
+                if (GUI.Button(new Rect(2 * Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), (Texture)snap[4]))
                 {
                     GameValues.accMoney += monies[4];
                     Debug.Log("Total$: " + GameValues.accMoney);
@@ -127,15 +125,14 @@ public class Papparazzi : MonoBehaviour
 
             if (notPressed)
                 if (maxshots > 5)
-                if (GUI.Button(new Rect(3 * Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), snap[5]))
+                if (GUI.Button(new Rect(3 * Screen.width / 4, 3 * Screen.height / 4, Screen.width / 5, Screen.height / 5), (Texture)snap[5]))
                 {
                     GameValues.accMoney += monies[5];
                         Debug.Log("Total$: " + GameValues.accMoney);
                         notPressed = false;
                         startZeitung(5);
                 }
-
-            //TODO: LevelOutro->ChangeLevel
+            
         }
     }
 
@@ -156,8 +153,8 @@ public class Papparazzi : MonoBehaviour
         Camera.onPostRender -= Snap;
         if (shots > 0)
         {
-            snap[maxshots - shots] = new Texture2D(Screen.width/2, Screen.height/2);
-            snap[maxshots - shots].ReadPixels(rekt, 0, 0);
+            snap[maxshots - shots] = new Texture2D(Screen.width-200, Screen.height-200);
+            snap[maxshots - shots].ReadPixels(Rect.MinMaxRect(100, 100, Screen.width-100, Screen.height-100), 0, 0);
             snap[maxshots - shots].Apply();
             shots--;
             canMove = true;

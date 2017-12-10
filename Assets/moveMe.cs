@@ -57,7 +57,7 @@ public class moveMe : MonoBehaviour {
         
 	}
 
-    void SwitchMode()
+    public void SwitchMode()
     {
         myRigid.isKinematic = true;
         myCapCol.enabled = false;

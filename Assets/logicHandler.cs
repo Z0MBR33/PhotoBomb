@@ -135,7 +135,8 @@ public class logicHandler : MonoBehaviour
         check = Random.value;
         if (check > minRandomBeforeSpawn)
         {
-            movingObjects.Add(Instantiate(movingObjectsList[(int)(Random.Range(0.0f, movingObjectsList.Length - 0.01f))], spawnLocations[(int)(Random.Range(0.0f, spawnLocations.Length - 0.01f))].transform.position, Quaternion.identity));
+            GameObject myRandomSpawner = spawnLocations[(int)(Random.Range(0.0f, spawnLocations.Length - 0.01f))];
+            movingObjects.Add(Instantiate(movingObjectsList[(int)(Random.Range(0.0f, movingObjectsList.Length - 0.01f))], myRandomSpawner.transform.position, myRandomSpawner.transform.rotation));
         }
         frameCounter = 0;
     }

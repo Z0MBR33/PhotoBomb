@@ -13,7 +13,7 @@ public class Explosion : MonoBehaviour {
         Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
         foreach (Collider hit in colliders)
         {
-            if(hit.gameObject.GetComponent<moveMe>() != null && !hit.gameObject.GetComponent<moveMe>().myRagDoll.activeSelf)
+            if(hit.gameObject.GetComponent<moveMe>() != null)
             {
                 hit.gameObject.GetComponent<moveMe>().SwitchMode();
                 Rigidbody rb = hit.GetComponentInChildren<Rigidbody>();
